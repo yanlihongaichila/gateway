@@ -9,12 +9,11 @@ import (
 
 func main() {
 	//通过nacos获取配置信息并且连接相关工具
-	err := app.Init(consts.ServiceName)
+	err := app.Init(consts.SERVICENAME)
 	if err != nil {
 		panic(err)
 		return
 	}
-
 	r := gin.Default()
 	api.Register(r)
 	r.Run(":7787")

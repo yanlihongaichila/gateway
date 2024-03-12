@@ -1,11 +1,11 @@
 package consts
 
 const (
-	SUCCESS       = 200
 	STATUSSUCCESS = 1000
 	PPM_ERROR     = 1001
 )
 
+const SUCCESS = 200
 const (
-	ServiceName = "gateway"
+	SERVICENAME = "gateway"
 )

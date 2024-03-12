@@ -26,3 +26,17 @@ func Login(c *gin.Context) {
 	http.Res(c, consts.SUCCESS, info, "")
 	return
 }
+
+func GetUserInfo(c *gin.Context) {
+	uid, _ := c.Get("user_id")
+	userID := uid.(int64)
+
+	info, err := service.GetUser(c, userID)
+	if err != nil {
+		http.Res(c, consts.PPM_ERROR, nil, err.Error())
+		return
+	}
+
+	http.Res(c, consts.SUCCESS, info, "")
+	return
+}
