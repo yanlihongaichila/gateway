@@ -1,0 +1,14 @@
+app:
+  ip: 10.2.171.2
+  port: 8082
+  group: DEFAULT_GROUP
+
+nacos:
+  ip: 127.0.0.1
+  port: 8848
+  group: DEFAULT_GROUP
+
+aliyun:
+  regionId: cn-hangzhou
+  accessKeyId: LTAI5tBAVye6ZoYKw4M8CFiB
+  accessKeySecret: sKLNVYUiGjNfR6d2EEiBB7iMjUWzCl

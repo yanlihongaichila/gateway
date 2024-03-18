@@ -1,6 +1,7 @@
 package user
 
 import (
+	"fmt"
 	"getway/consts"
 	"getway/service"
 	"github.com/gin-gonic/gin"
@@ -8,6 +9,7 @@ import (
 )
 
 func Login(c *gin.Context) {
+	fmt.Println("***********************************")
 	var loginReq struct {
 		Username string `json:"username"`
 		Password string `json:"password"`
@@ -16,7 +18,8 @@ func Login(c *gin.Context) {
 		http.Res(c, 121, nil, err.Error())
 		return
 	}
-
+	fmt.Println("88888888888")
+	fmt.Println(loginReq.Username)
 	info, err := service.Login(c, loginReq.Username, loginReq.Password)
 	if err != nil {
 		http.Res(c, 122, nil, err.Error())
